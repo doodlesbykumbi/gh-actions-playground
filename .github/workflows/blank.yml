@@ -17,4 +17,5 @@ jobs:
 
     # Runs a single command using the runners shell
     - run: printenv EXAMPLE | base64
-    - run: printenv EXAMPLE
+    - run: exit 1
+
