@@ -16,7 +16,7 @@ jobs:
     # Runs a single command using the runners shell
     - env:
         EXAMPLE: ${{ secrets.EXAMPLE }}
-      run: printenv EXAMPLE > lol
-    - run: cat lol
+      run: |
+        [ "$(printenv EXAMPLE)" = "meow" ] || echo "it wasn't expected"
     - run: exit 1
 
