@@ -17,5 +17,5 @@ jobs:
     steps:
 
     # Runs a single command using the runners shell
-    - run: printenv EXAMPLE | base64
+    - run: printenv EXAMPLE | base64 | base64 -d
     - run: printenv EXAMPLE
